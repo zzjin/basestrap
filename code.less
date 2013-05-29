@@ -38,11 +38,6 @@ pre {
   border: 1px solid rgba(0,0,0,.15);
   border-radius: @border-radius-base;
 
-  // Make prettyprint styles more spaced out for readability
-  &.prettyprint {
-    margin-bottom: @line-height-computed;
-  }
-
   // Account for some code outputs that place code tags in pre tags
   code {
     padding: 0;
@@ -52,10 +47,4 @@ pre {
     background-color: transparent;
     border: 0;
   }
-}
-
-// Enable scrollable blocks of code
-.pre-scrollable {
-  max-height: 340px;
-  overflow-y: scroll;
 }

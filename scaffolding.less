@@ -27,6 +27,29 @@ body {
   line-height: @line-height-base;
   color: @text-color;
   background-color: @body-bg;
+
+  .container-fixed();
+}
+
+// Responsive: Tablets and up
+@media screen and (min-width: @screen-tablet) {
+  body {
+    max-width: 728px;
+  }
+}
+
+// Responsive: Desktops and up
+@media screen and (min-width: @screen-desktop) {
+  body {
+    max-width: 940px;
+  }
+}
+
+// Responsive: Large desktops and up
+@media screen and (min-width: @screen-large-desktop) {
+  body {
+    max-width: 1170px;
+  }
 }
 
 // Reset fonts for revelant elements
@@ -50,7 +73,7 @@ a {
 a:hover,
 a:focus {
   color: @link-hover-color;
-  text-decoration: underline;
+  text-decoration: none;
 }
 a:focus {
   .tab-focus();
@@ -67,17 +90,4 @@ img {
 
   // Match vertical alignment with other comment elements
   vertical-align: middle;
-}
-
-// Rounded corners
-.img-rounded {
-  border-radius: 6px;
-}
-
-// Image thumbnails
-// See thumbnails.less for `.img-thumbnail`
-
-// Perfect circle
-.img-circle {
-  border-radius: 500px; // crank the border-radius so it works with most reasonably sized images
 }

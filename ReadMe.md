@@ -1,4 +1,4 @@
-BaseStrap
+#BaseStrap
 
 normalize & pretty set basic html tags
 
@@ -9,7 +9,7 @@ normalize & pretty set basic html tags
 just inlcude precomplied css in your html
 
 ## Build
-
+lessc basestrap.less basestrap.css
 
 ## Thanks
 [normalize.css](http://necolas.github.io/normalize.css/)
