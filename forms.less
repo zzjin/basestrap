@@ -32,6 +32,8 @@ label {
   display: inline-block;
   margin-bottom: 5px;
   font-weight: bold;
+  width: 20%;
+  text-align: right;
 }
 
 // Form controls
@@ -54,7 +56,7 @@ input[type="url"],
 input[type="search"],
 input[type="tel"],
 input[type="color"] {
-  display: block;
+  display: inline-block;
   min-height: @input-height-small;
   padding: @padding-small-vertical @padding-small-horizontal;
   font-size: @font-size-small;
@@ -79,7 +81,7 @@ input[type="color"] {
 input,
 select,
 textarea {
-  width: 100%;
+  width: 80%;
 }
 
 // Reset width of input images, buttons, radios, checkboxes
@@ -109,6 +111,18 @@ input[type="checkbox"] {
   margin: 4px 0 0;
   margin-top: 1px \9; /* IE8-9 */
   line-height: normal;
+  display: inline-block;
+//  padding-top: 5px;
+  padding-left: 20px;
+  margin-bottom: 0;
+  vertical-align: middle;
+  font-weight: normal;
+  cursor: pointer;
+}
+input[type="radio"] + input[type="radio"],
+input[type="checkbox"] + input[type="checkbox"] {
+  margin-top: 0;
+  margin-left: 10px; // space out consecutive inline controls
 }
 
 // Set the height of select and file controls to match text inputs
@@ -180,32 +194,6 @@ textarea {
   margin-top: -5px; // Move up sibling radios or checkboxes for tighter spacing
 }
 
-/*
-// Move the options list down to align with labels
-.controls > .radio:first-child,
-.controls > .checkbox:first-child {
-  padding-top: 5px; // has to be padding because margin collaspes
-}
-*/
-
-// Radios and checkboxes on same line
-.radio-inline,
-.checkbox-inline {
-  display: inline-block;
-//  padding-top: 5px;
-  padding-left: 20px;
-  margin-bottom: 0;
-  vertical-align: middle;
-  font-weight: normal;
-  cursor: pointer;
-}
-.radio-inline + .radio-inline,
-.checkbox-inline + .checkbox-inline {
-  margin-top: 0;
-  margin-left: 10px; // space out consecutive inline controls
-}
-
-
 
 // HTML5 invalid states
 // Shares styles with the .control-group.error above
@@ -232,12 +220,5 @@ select:focus:invalid {
   }
   .control-label {
     padding-top: 6px;
-  }
-}
-
-// Only right aline form labels here when the columns stop stacking
-@media (min-width: 768px) {
-  .form-horizontal .control-label {
-    text-align: right;
   }
 }
